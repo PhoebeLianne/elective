@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>The Electric Trio</title> 
+  <link rel="stylesheet" href="styles.css"> 
+ <style type="text/css" id="dcoder_stylesheet">body {
+ font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4eeff;
+}
+
+header {
+    background-color: #dcd6f7;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #494F41;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #a6b1e1;
+}
+
+.more-info {
+    display: none;
+    margin-top: 10px;
+    background-color: #a6b1e1;
+    padding: 10px;
+    border: 1px solid 424874;
+}</style></head> 
+ <body> 
+  <header>
+ <h1>The Electric Trio</h1> 
+   <p>Let's Explore Conductors, Insulators, and Semiconductors</p> 
+  </header> 
+  <nav> 
+   <ul> 
+    <li><a href="#conductors">Conductors</a></li> 
+    <li><a href="#insulators">Insulators</a></li> 
+    <li><a href="#semiconductors">Semiconductors</a></li> 
+   </ul> 
+  </nav> 
+  <main> 
+   <section id="conductors"> 
+    <h2>Conductors</h2> 
+    <p>Conductors allow electrons to flow freely. Examples include copper and aluminum.</p> <button onclick="showMore('conductors')">Learn More</button> 
+    <div class="more-info" id="conductors-info"></div> 
+   </section> 
+   <section id="insulators"> 
+    <h2>Insulators</h2> 
+    <p>Insulators prevent the flow of electrons. Examples include rubber and plastic.</p> <button onclick="showMore('insulators')">Learn More</button> 
+    <div class="more-info" id="insulators-info"></div> 
+   </section> 
+   <section id="semiconductors"> 
+    <h2>Semiconductors</h2> 
+    <p>Semiconductors control the flow of electrons. Examples include silicon.</p> <button onclick="showMore('semiconductors')">Learn More</button> 
+    <div class="more-info" id="semiconductors-info"></div> 
+   </section> 
+  </main> 
+  <footer> 
+   <p>© Phoebe Lianne B. Sacriz</p> 
+  </footer> 
+  <script src="script.js"></script> 
+
+<script type="text/javascript" id="dcoder_script">function showMore(type) {
+const infoDiv = document.getElementById(${type}-info);
+    
+    if (infoDiv.style.display === "none" || infoDiv.style.display === "") {
+        infoDiv.style.display = "block";
+        if (type === 'conductors') {
+            infoDiv.innerHTML = "<p>High electrical conductivity. It allows the flow of electrical current wth low or no resistance. Metallic structure, a lattice of positively charged ions and a bunch of delocalized electrons that can move freely. Low resistance, facilitating efficient transmission of electricity, influenced by material type and temperature. Resistance generally increases temperature due to increased lattice vibrations. Less affected by external factors, but physical changes like stretching and compressing can influence performance.</p>";
+        } else if (type === 'insulators') {
+            infoDiv.innerHTML = "<p>It have a very low electrical conductivity, blocking the flow of current. Their atomic structure features tightly bound electrons with full valence shells, preventing movements. High resistance, effectively preventing current from passing through, influenced by material type and thickness. Resistance remains high regardless of temperature, the extreme heat may lead to breakdown, allowing some current to flow. Can be affected by moisture and physical damage, which may reduce their effectiveness.</p>";
+        } else if (type === 'semiconductors') {
+            infoDiv.innerHTML = "<p>Moderate electrical conductivity, conductivity can be manipulated through doping. They possess crystalline structure with four valence electrons, allowing for covalent bonding, behaves like an insulator at absolute zero. Variable resistance that can be altered through doping or changes in temperature. Influenced by temperature, impurities, and electric fields. As temperature rises, their resistance decreases because more electrons gain energy and enter the conduction band. Doping and the application of electric fields can significantly alter conductivity, making them highly adaptable for electronic uses.</p>";
+        }
+    } else {
+        infoDiv.style.display = "none";
+    }
+}</script></body></html>
+ </body>
+</html>
